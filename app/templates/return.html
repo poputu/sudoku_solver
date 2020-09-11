@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Sudoky solver
+{% endblock title %}
+
+{% block content %}
+<table>
+    <th style="border: 1px solid black;">
+        {% for row in sudoku1 %}
+            {% for number in row%}
+                <big>{{number}},</big>
+            {%endfor%}<br>
+        {% endfor %}
+    </th>
+</table>
+<a href="/" type="submit" class="button" style="height: 23px; width: 168px; padding: 5px; margin: 2px; text-align: center; margin-top: 2px;" >Return</a>  
+{% endblock content %}
+
