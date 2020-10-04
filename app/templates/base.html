@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+      integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title  %}{% endblock title%}</title>
+    <title>{% block title %}{% endblock title %}</title>
 </head>
 <style>
     body {
-      background-color: azure;  
-      padding: 10px 10px;
-      border-radius: 10px;
-      background: #bdc3c7;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-color: azure;
+        padding: 10px 10px;
+        border-radius: 10px;
+        background: #bdc3c7; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     }
+
     .table1 {
-      border: 1px solid silver;
-      padding: 3px 3px;
-      width: 350px;
-      height: 350px;
-      border: none;
-      border-radius: 4px;
-      background-color: azure;
+        border: 1px solid silver;
+        padding: 3px 3px;
+        width: 350px;
+        height: 350px;
+        border: none;
+        border-radius: 4px;
+        background-color: azure;
     }
+
     input {
-      margin: 2px;
-      width: 1%;
-      height: 1%;
-      padding: 5px 5px;
-      border: 1px solid grey;
-      border-radius: 4px;
-      text-align: center;
-      
+        margin: 2px;
+        width: 1%;
+        height: 1%;
+        padding: 5px 5px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        text-align: center;
+
     }
+
     table, th, td {
         padding: 5px;
         border-radius: 4px;
@@ -43,11 +47,13 @@
         height: 350px;
         font-size: 1.2em;
     }
+
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+        -webkit-appearance: none;
+        margin: 0;
     }
+
     .button {
         background-color: #EFEFEF; /* Green */
         border: 1px solid grey;
@@ -58,14 +64,23 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-      }
-  </style>
+    }
+</style>
 <body>
-    <div>
-
-        {% block content %}
-      
-        {% endblock content %}
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
     </div>
+{% endfor %}
+<div>
+
+    {% block content %}
+
+    {% endblock content %}
+</div>
 </body>
+<footer>
+
+</footer>
 </html>

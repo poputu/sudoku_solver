@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Sudoky solver
+{% endblock title %}
+
+{% block content %}
+
+    <p>
+        {% for row in table %}
+            {{ row }}
+        {% endfor %}
+    </p>
+    </div>
+
+<a href="/" type="submit" class="button" style="height: 23px; width: 168px; padding: 5px; margin: 2px; text-align: center; margin-top: 2px;" >Return</a>
+{% endblock content %}
