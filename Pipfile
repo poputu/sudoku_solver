@@ -9,6 +9,7 @@ verify_ssl = true
 flask = "*"
 tabulate = "*"
 gunicorn = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.6"
