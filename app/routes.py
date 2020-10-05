@@ -4,10 +4,6 @@ from app import app
 from . import sudoky
 
 
-def error1():
-    return render_template("index.html", text='this sudoku is not valid')
-
-
 @app.route('/', methods=["GET", "POST"])
 @app.route('/index', methods=["GET", "POST"])
 def index():
