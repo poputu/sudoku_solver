@@ -6,14 +6,13 @@
 
 {% block content %}
 <table>
-    <th style="border: 1px solid black;">
+
         {% for row in sudoku1 %}
-            {% for number in row%}
-                {{number}}
-            {%endfor%}<br>
+            <tr>{% for number in row%}
+                <td>{{number}}</td>
+            {%endfor%}</tr>
         {% endfor %}
-    </th>
 </table>
-<a href="/" type="submit" class="button" style="height: 23px; width: 168px; padding: 5px; margin: 2px; text-align: center;" >Return</a>
+<a href="/" type="submit" class="button">Return</a>
 {% endblock content %}
 

@@ -2,115 +2,209 @@
 
 
 {% block title %}
-    Sudoky solver
+    Sudoku solver
 {% endblock title %}
 
 {% block content %}
 
 
-<h3>Sudoku solver</h3>
-<p>It's my Flask shell for <a href="https://towardsdatascience.com/solve-sudokus-automatically-4032b2203b64" target="_blank">this solution</a></p>
+    <h3>Sudoku solver</h3>
+    <p>
+        It's my Flask shell for <a href="https://towardsdatascience.com/solve-sudokus-automatically-4032b2203b64"
+                                   target="_blank">this solution</a>
+    </p>
+    <br>
+    <div>
+        <form action="/" method="POST" class="sell">
+            <table>
+                <tr>
+                    <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                </tr>
 
+                <tr>
+                    <td><input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" required></td>
+                </tr>
 
-</p>
-<div class="table">
-  <form action="/" method="POST" class="sell">
-    <input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <br>
-    <input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row1" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <br>
-    <input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row2" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <br>
-    <input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row3" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <br>
-    <input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row4" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <br>
-    <input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row5" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <br>
-    <input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row6" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <br>
-    <input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row7" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <br>
-    <input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <input type="number" name="row8" value="0" min="0" max="9" onfocus="this.value=''" onblur="if (this.value=='') this.value='0';" required>
-    <br>
-    <input type="submit" value="Try to solve" style="height: 35px; width: 180px;">
+            </table>
+            <input type="submit" class="button" value="Try to solve">
+            <input type="reset" class="button" onclick="window.location.href='/'">
 
-    <br>
-    <a href="/" type="submit" class="button" style="height: 23px; width: 168px; padding: 5px; margin: 2px; text-align: center;" >Reset</a>
-  </form>
-</div>
+        </form>
+    </div>
 
 
 
