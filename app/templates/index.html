@@ -8,6 +8,7 @@
 {% block content %}
 
 
+
     <h3>Sudoku solver</h3>
     <p>
         It's my Flask shell for <a href="https://towardsdatascience.com/solve-sudokus-automatically-4032b2203b64"
@@ -18,8 +19,8 @@
         <form action="/" method="POST" class="sell">
             <table>
                 <tr>
-                    <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
-                               onblur="if (this.value=='') this.value='0';" required></td>
+                    <td><input id="myInput" type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
+                               onblur="if (this.value=='') this.value='0';" step="1.0" required></td>
                     <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
                                onblur="if (this.value=='') this.value='0';" required></td>
                     <td><input type="number" name="row0" value="0" min="0" max="9" onfocus="this.value=''"
@@ -206,6 +207,23 @@
         </form>
     </div>
 
+    <script>
+        myInput.oninput = function reduce() {
+            if (this.value.length > 1) {
+                this.value = this.value.slice(1);
+                document.getElementById("myInput").style.background = "red";
+            }
+        }
+    </script>
+    <script>
 
+        $(":input").on('input', function() {
+            document.getElementById("myInput").style.background = "red";
+            if (this.value.length > 1) {
+                this.value = this.value.toString().slice(1);
+                document.getElementById("myInput").style.background = "white";
+            }
+        });
+    </script>
 
 {% endblock content %}
