@@ -2,7 +2,7 @@
 
 
 def printsudoku(sudoku):
-    """print out our sudoky in this state"""
+    """print out our sudoku"""
     print("\n\n\n\n\n")
     for i in range(len(sudoku)):
         line = ""
@@ -16,7 +16,7 @@ def printsudoku(sudoku):
 
 
 def findNextCellToFill(sudoku):
-    """find all positions with 0 to fill other number"""
+    """find all positions with 0 to fill"""
     for x in range(9):
         for y in range(9):
             if sudoku[x][y] == 0:
@@ -55,7 +55,8 @@ def solveSudoku(sudoku, i=0, j=0):
 
 def checkifsudoku(sudoku):
     """check if user give right input"""
-    """changes values with temp so I don't need to change other person code
+    """changes values with temp so I don't need to change other person code 
+    it's check itself like a double, so now I change it to 0 before start
     Can change this TODO"""
     for i in range(9):
         for j in range(9):
