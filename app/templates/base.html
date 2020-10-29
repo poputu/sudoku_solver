@@ -3,154 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9">
-    <title>{% block title %}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-<style>
-    /* with css reset */
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure,
-    footer, header, hgroup, menu, nav, section {
-        display: block;
-    }
+<link rel="stylesheet" href="/static/main.css">
 
-    body {
-        line-height: 1;
-        display: flex;
-    }
-
-    ol, ul {
-        list-style: none;
-    }
-
-    blockquote, q {
-        quotes: none;
-    }
-
-    blockquote:before, blockquote:after,
-    q:before, q:after {
-        content: '';
-        content: none;
-    }
-
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-
-    body {
-        margin: 10px;
-        background-color: azure;
-        padding: 10px 10px;
-        background: #bdc3c7; /* fallback for old browsers */
-        background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, #eeeeee, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        float: top;
-    }
-
-    div {
-        min-height: 10em;
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    table {
-        text-align: center;
-        background-color: #bdc3c7;
-        border-spacing: 0px;
-    }
-
-
-    td {
-        border: 1px solid lightgrey;
-
-        height: 40px;
-        width: 40px;
-        text-align: center;
-        padding: 0;
-    }
-
-    td:first-child {
-        border-left-color: black;
-    }
-
-    td:nth-child(3n) {
-        border-right-color: black;
-    }
-
-    tr:first-child td {
-        border-top-color: black;
-    }
-
-    tr:nth-child(3n) td {
-        border-bottom-color: black;
-    }
-
-    input[type=number] {
-        padding: 0;
-        text-align: center;
-        border: 0 solid white;
-        height: 35px;
-        width: 35px;
-        background-color: #bdc3c7;
-
-    }
-
-    input[type=submit], input[reset] {
-        padding: 5px;
-        margin-top: 5px;
-        background-color: #bdc3c7;
-    }
-
-    input:hover {
-        background: #eee;
-    }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-
-    .button {
-        background-color: #bdc3c7; /* Green */
-        border: 1px solid black;
-
-        color: black;
-        padding: 5px;
-        margin-top: 5px;
-        text-align: left;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-    }
-
-    a:hover {
-        background-color: #eeeeee;
-    }
-</style>
 <body>
 {% for message in get_flashed_messages() %}
     <div class="alert alert-warning">
@@ -158,14 +20,32 @@
         {{ message }}
     </div>
 {% endfor %}
-<div>
 
+<div>
+    <h3>Sudoku solver</h3>
+    <p>
+        It's my Flask shell for <a href="https://towardsdatascience.com/solve-sudokus-automatically-4032b2203b64"
+                                   target="_blank">this solution</a>
+    </p>
+    <br>
     {% block content %}
 
     {% endblock content %}
 </div>
 </body>
 <footer>
+    <div class="footer">
+        <p>
+            Contacts
+        </p>
+        <a class="button fa fa-github" href="https://github.com/poputu/sudoku_solver" target='_blank'>
+            View on github
+        </a>
+        <br>
+        <a class="button fa fa-twitter" href="https://twitter.com/MrPoputu" target='_blank'>
+            Mrpoputu
+        </a>
 
+    </div>
 </footer>
 </html>

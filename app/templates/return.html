@@ -5,14 +5,14 @@
 {% endblock title %}
 
 {% block content %}
-<table>
+    <table>
 
         {% for row in sudoku1 %}
-            <tr>{% for number in row%}
-                <td>{{number}}</td>
-            {%endfor%}</tr>
+            <tr>{% for number in row %}
+                <td>{{ number }}</td>
+            {% endfor %}</tr>
         {% endfor %}
-</table>
-<a href="/" type="submit" class="button">Return</a>
+    </table>
+    <a href="/" type="submit" class="button">Return</a>
 {% endblock content %}
 
