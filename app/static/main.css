@@ -148,6 +148,13 @@ a:hover {
     text-align: left;
     margin: 10px;
     padding: 10px 10px;
+    z-index: 1;
+}
+
+.mytable {
+    position: fixed;
+    text-align: left;
+    z-index: 1000;
 }
 
 .alert {
