@@ -14,14 +14,15 @@
 <link rel="stylesheet" href="/static/main.css">
 
 <body>
-{% for message in get_flashed_messages() %}
-    <div class="alert alert-warning">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        {{ message }}
-    </div>
-{% endfor %}
+
 
 <div>
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning" style="background-color: red;">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+    {% endfor %}
     <h3>Sudoku solver</h3>
     <p>
         It's my Flask shell for <a href="https://towardsdatascience.com/solve-sudokus-automatically-4032b2203b64"
